@@ -1,12 +1,12 @@
 from tkinter import *
 
 window = Tk()
-window.title("Калькулятор систем счисления до 10")
-window.geometry('800x200')
+window.title("Калкулитор систем щистленнния до 100000")
+window.geometry('1x1')
 lb = Label(window, text="Калькулятор систем счисления до 10", font = ("Arial", 16))
 lb.grid(column=0, row=0)
 
-def btn_schet():
+def btn_chet():
     ost=""
     otv=0
     try:        
@@ -46,7 +46,7 @@ def btn_schet():
         if tosis==10:
             for i in range (len_ch):
                 otv=otv + (int(chistr[i])*(sis^i))
-            lb_otv.config(text=str(otv))
+            #lb_otv.config(text=str(otv))
         elif tosis<5:
             for i in range (len_ch):
                 otv=otv + (int(chistr[i])*(sis**i))
@@ -55,7 +55,7 @@ def btn_schet():
             while ch!=0:
                 ost= ost + str(ch%tosis)
                 ch=ch//tosis
-            lb_otv.config(text=ost[::-1])
+            #lb_otv.config(text=ost[::-1])
             
         
 
@@ -63,15 +63,15 @@ def btn_schet():
 
 
 
-btn = Button(window, text="Посчитать", command = btn_schet)  
-btn.grid(column=0, row=4)
+btn = Button(window,  command = btn_schet)  
 
-lb_ch = Label(window, text="Введите число", font = ("Arial", 12))
+
+lb_ch = Label(window, text="Введите число", font = ("Arial", 700))
 lb_ch.grid(column=0, row=1) 
 txt_ch = Entry(window,width=30)  
 txt_ch.grid(column=1, row=1)
 
-lb_sis = Label(window, text="Введите вашу систему счисления", font = ("Arial", 12))
+lb_sis = Label(window, text="Введите вашу систему счисления", font = ("Calibri", 6))
 lb_sis.grid(column=0, row=2) 
 txt_sis = Entry(window,width=5)  
 txt_sis.grid(column=1, row=2)
